@@ -1,0 +1,441 @@
+.sikayet-liste {
+    margin-top: 20px;
+}
+
+.arama-kutusu {
+    margin-bottom: 20px;
+}
+
+.sikayet-detay {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.durum-acik {
+    color: red;
+}
+
+.durum-kapali {
+    color: green;
+}
+
+:root {
+    --primary-color: #ff4646;
+    --secondary-color: #333;
+    --light-gray: #f5f5f5;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--light-gray);
+    padding-top: 80px;
+}
+
+/* Header Stili */
+.site-header {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Giriş Formu Stili */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.login-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Panel Stili */
+.panel-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Şikayet Kartı Stili */
+.sikayet-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.sikayet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.sikayet-text {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.sikayet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sikayet-firma {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.sikayet-tarih {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.sikayet-durum {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.durum-acik {
+    background-color: #ffe5e5;
+    color: var(--primary-color);
+}
+
+.durum-kapali {
+    background-color: #e5ffe5;
+    color: #28a745;
+}
+
+/* Buton Stilleri */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #e63e3e;
+    border-color: #e63e3e;
+}
+
+/* Arama Kutusu Stili */
+.search-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.search-box input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .login-container {
+        margin: 20px 10px;
+    }
+    body {
+        padding-top: 70px;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Profile Styles */
+.profile-sidebar {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-sidebar {
+        margin-bottom: 30px;
+    }
+}
+
+.recent-complaints {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.recent-complaints h2 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+    border-radius: 25px;
+ 
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: white !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 15px 0;
+}
+
+.navbar .logo {
+    color: var(--primary-color) !important;
+    font-size: 24px;
+    padding: 0;
+    margin-left: 25px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* Çıkış butonu stilleri */
+.navbar .btn-outline-danger {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.navbar .btn-outline-danger:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sikayet-actions {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.sikayet-actions button {
+    transition: all 0.3s ease;
+}
+
+.sikayet-actions button:hover {
+    transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-header .btn-close {
+    color: white;
+    opacity: 1;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+}
+
+/* SweetAlert Özelleştirmeleri */
+.swal2-popup {
+    border-radius: 15px !important;
+}
+
+.swal2-title {
+    color: var(--secondary-color) !important;
+}
+
+.swal2-confirm {
+    background-color: var(--primary-color) !important;
+    border-radius: 8px !important;
+}
+
+.swal2-cancel {
+    border-radius: 8px !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 70, 70, 0.2);
+}
+
+.recent-complaints .btn-lg {
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+/* Profil Sayfası Stilleri */
+.profile-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #ff7676 100%);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-avatar {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.profile-title {
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 70, 70, 0.25);
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 70, 70, 0.3);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 20px;
+    }
+    
+    .profile-avatar {
+        font-size: 60px;
+    }
+}
+
+.profile-avatar img.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
