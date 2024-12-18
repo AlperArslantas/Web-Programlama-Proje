@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Kullanıcı tipine göre navbar linkini ayarla
+    const sikayetlerLink = document.querySelector('.nav-link[href="musteri-panel.html"]');
+    if (aktifKullanici.tip === 'firma') {
+        sikayetlerLink.href = 'firma-panel.html';
+    }
+
     // Şifre değiştirme alanını başlangıçta gizle ve inputları temizle
     const sifreAlani = document.getElementById('sifreAlani');
     sifreAlani.style.display = 'none';
@@ -110,10 +116,3 @@ document.addEventListener('DOMContentLoaded', () => {
         sifreDegistirBtn.innerHTML = '<i class="fas fa-key me-2"></i>Şifreyi Yenile';
     });
 });
-
-// Çıkış fonksiyonu
-function cikisYap() {
-    localStorage.removeItem('kullaniciTipi');
-    localStorage.removeItem('kullaniciEmail');
-    window.location.href = '../index.html';
-}

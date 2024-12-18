@@ -312,7 +312,21 @@ let aktifSikayetId = null;
 function cevapVer(sikayetId) {
     aktifSikayetId = sikayetId;
     const sikayet = sikayetler.find(s => s.id === sikayetId);
-    document.getElementById('cevapMetni').value = sikayet.cevap;
+    const cevapInput = document.getElementById('cevapMetni');
+    
+    // Eğer henüz cevap verilmediyse, input'u temizle
+    if (sikayet.cevap === 'Henüz cevap verilmedi') {
+        cevapInput.value = '';
+    } else {
+        cevapInput.value = sikayet.cevap;
+    }
+
+    // Input'a tıklandığında "Henüz cevap verilmedi" yazısını temizle
+    cevapInput.addEventListener('focus', function() {
+        if (this.value === 'Henüz cevap verilmedi') {
+            this.value = '';
+        }
+    });
 }
 
 // Cevabı kaydet
@@ -330,9 +344,19 @@ function cevapKaydet() {
         modal.hide();
 
         // Başarılı mesajı göster
-        alert('Cevabınız kaydedildi ve şikayet kapatıldı.');
+        Swal.fire({
+            title: 'Başarılı!',
+            text: 'Cevabınız kaydedildi ve şikayet kapatıldı.',
+            icon: 'success',
+            confirmButtonText: 'Tamam'
+        });
     } else {
-        alert('Lütfen bir cevap yazın!');
+        Swal.fire({
+            title: 'Hata!',
+            text: 'Lütfen bir cevap yazın!',
+            icon: 'error',
+            confirmButtonText: 'Tamam'
+        });
     }
 }
 
