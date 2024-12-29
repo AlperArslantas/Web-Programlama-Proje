@@ -41,6 +41,7 @@ function sikayetDetayGoster(sikayetId) {
     if (sikayet) {
         Swal.fire({
             title: `${sikayet.firmaAdi} - Şikayet Detayı`,
+            
             html: `
                 <div class="text-start">
                     <p><strong>Müşteri:</strong> ${sikayet.musteriAdi}</p>

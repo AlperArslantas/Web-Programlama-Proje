@@ -87,12 +87,9 @@ const kullanicilar = {
 function girisYap() {
     const email = document.getElementById('email').value;
     const sifre = document.getElementById('password').value;
-    const tip = document.getElementById('userType').value;
 
-    let kullanici;
-    if (tip === 'musteri') {
-        kullanici = kullanicilar.musteriler.find(m => m.email === email && m.sifre === sifre);
-    } else {
+    let kullanici = kullanicilar.musteriler.find(m => m.email === email && m.sifre === sifre);
+    if (!kullanici) {
         kullanici = kullanicilar.firmalar.find(f => f.email === email && f.sifre === sifre);
     }
 
@@ -106,11 +103,7 @@ function girisYap() {
             timer: 1500,
             showConfirmButton: false
         }).then(() => {
-            if (tip === 'musteri') {
-                window.location.href = 'pages/musteri-panel.html';
-            } else {
-                window.location.href = 'pages/firma-panel.html';
-            }
+            window.location.href = kullanici.tip === 'musteri' ? 'pages/musteri-panel.html' : 'pages/firma-panel.html';
         });
     } else {
         Swal.fire({
